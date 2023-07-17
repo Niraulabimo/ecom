@@ -9,7 +9,6 @@ import { LanguageComponent } from './language/language.component';
 import { MaindemoComponent } from './maindemo/maindemo.component';
 import { UniversityComponent } from './university/university.component';
 
-
 @NgModule({
   declarations: [
     CoursehubComponent,
@@ -17,11 +16,12 @@ import { UniversityComponent } from './university/university.component';
     KindergartenComponent,
     LanguageComponent,
     MaindemoComponent,
-    UniversityComponent
+    UniversityComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ]
+  imports: [CommonModule, HomeRoutingModule],
 })
-export class HomeModule { }
+export class HomeModule {
+  constructor() {
+    console.log('home module loaded');
+  }
+}
